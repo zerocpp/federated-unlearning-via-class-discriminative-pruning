@@ -113,7 +113,7 @@ def train(net, epochs, lr, train_loader, test_loader, save_info='./', save_acc=8
 
         if val_acc*100 > save_acc:
             _save_acc = val_acc*100
-            save_path = save_info / ('seed'+str(seed)+'_acc'+str(_save_acc)[0:5]+
+            save_path = save_info + '/' + ('seed'+str(seed)+'_acc'+str(_save_acc)[0:5]+
                                      '_epoch'+str(epoch)+
                                      time.strftime("_%Y-%m-%d %H-%M-%S", time.localtime())+'.pth')
             print('save path', save_path)
